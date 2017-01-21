@@ -1,11 +1,14 @@
-$(document).ready(function() {
-    $.ajax({
-        type: "GET",
-        url: "test.csv",
-        dataType: "text",
-        success: function(data) {process(data)}
-     });
-});
+/*$('#myForm').ajaxForm({
+        url : '/handleCSV', // or whatever
+        dataType : 'text',
+        success : function (response) {
+            alert("The server says: " + response);
+        }
+    })
+;*/
+ $('#myForm').ajaxForm(function() { 
+    alert("Thank you for your comment!"); 
+ }); 
 
 var choicemap = {
     "A" : "1",
