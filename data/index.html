@@ -84,14 +84,15 @@
         <input type="submit" name="submit"/>
     </form>
 
-    <form action="/getcsv" method"get" id="getForm">
+    <form action="/getcsv" method = "get" id="getForm">
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--col9">
-            <input class="mdl-textfield__input" type="text" id="getID">
+            <input class="mdl-textfield__input" type="text" id="getID" name="id">
             <label class="mdl-textfield__label" for="sample3">Type in the ID</label>
           </div>
           <div class="mdl-cell mdl-cell--col9">
+            <input type="textarea" name="testname">
             <input type="submit" name="submit" class="mdl-button mdl-js button mdl-button-raised mdl-js-ripple-effect">
           </div>
         </div>

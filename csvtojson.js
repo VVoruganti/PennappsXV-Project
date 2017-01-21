@@ -61,7 +61,7 @@ function process(data) {
     var newnum =parseInt(fs.readFileSync('C://Users/' + user + '/Desktop/PennApps2017w/data/next.txt.txt', 'utf-8'));
     console.log("new num " + newnum)
     fs.writeFile('C://Users/' + user + '/Desktop/PennApps2017w/data/next.txt.txt', newnum+1, function(err){});
-    fs.writeFile("C://Users/' + user + '/Desktop/PennApps2017w/data/tests/" + newnum + ".json", outText, function(err) { //TODO make this write to distinct files every time and return the id.
+    fs.writeFile("C://Users/" + user + "/Desktop/PennApps2017w/data/tests/" + newnum + ".json", outText, function(err) { //TODO make this write to distinct files every time and return the id.
         if(err) {
             return console.log(err);
         }
@@ -100,6 +100,17 @@ app.post("/csv", function(req, res) {
     });
 
 })
+
+app.get("/getcsv", function(req, res) {
+    console.log(req.query);
+    if (!fs.existsSync('C://Users/' + user + '/Desktop/PennApps2017w/data/tests/' + req.query.id + '.json')) {
+        res.status(404);
+        res.json({"Error 404" : "No test with that id is on this server."});
+    }
+
+    res.status(200);
+    res.download('C://Users/' + user + '/Desktop/PennApps2017w/data/tests/' + req.query.id + '.json', req.query.testname + ".json", function(err){console.log(err)});
+}) 
 
 app.use(express.static('data'))
 
