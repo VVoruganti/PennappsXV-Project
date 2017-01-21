@@ -7,6 +7,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
+var user = "lucar";
+
 var choicemap = {
     "A" : "1",
     "a" : "1",
@@ -56,10 +58,10 @@ function process(data) {
     }
     console.log(quizObj);
     var outText = JSON.stringify(quizObj);
-    var newnum =parseInt(fs.readFileSync('C://Users/lucar/Desktop/PennApps2017w/data/next.txt.txt', 'utf-8'));
+    var newnum =parseInt(fs.readFileSync('C://Users/' + user + '/Desktop/PennApps2017w/data/next.txt.txt', 'utf-8'));
     console.log("new num " + newnum)
-    fs.writeFile('C://Users/lucar/Desktop/PennApps2017w/data/next.txt.txt', newnum+1, function(err){});
-    fs.writeFile("C://Users/lucar/Desktop/PennApps2017w/data/tests/" + newnum + ".json", outText, function(err) { //TODO make this write to distinct files every time and return the id.
+    fs.writeFile('C://Users/' + user + '/Desktop/PennApps2017w/data/next.txt.txt', newnum+1, function(err){});
+    fs.writeFile("C://Users/' + user + '/Desktop/PennApps2017w/data/tests/" + newnum + ".json", outText, function(err) { //TODO make this write to distinct files every time and return the id.
         if(err) {
             return console.log(err);
         }
@@ -83,12 +85,12 @@ app.post("/csv", function(req, res) {
     req.busboy.on('file', function (fieldname, file, filename) {
         console.log("Uploading: " + filename);
 
-        fstream = fs.createWriteStream('C://Users/lucar/Desktop/PennApps2017w/data/tests/temp.csv');
+        fstream = fs.createWriteStream('C://Users/' + user + '/Desktop/PennApps2017w/data/tests/temp.csv');
                 console.log(file.read());
         file.pipe(fstream);
         fstream.on('close', function () {    
             console.log("Upload Finished of " + filename);             
-            fs.readFile('C://Users/lucar/Desktop/PennApps2017w/data/tests/temp.csv','utf-8',function(err,data) {
+            fs.readFile('C://Users/' + user + '/Desktop/PennApps2017w/data/tests/temp.csv','utf-8',function(err,data) {
                 var id = process(data);
                 res.status(200);
                 res.json({"response" :"successfully received data, your id for future use is " + id});
