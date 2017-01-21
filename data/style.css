@@ -7,7 +7,7 @@ h1 {
     font-size:12em;
 }
 
-h2 {
+.subheader {
   margin-top:-50px;
 }
 
@@ -53,4 +53,55 @@ background-color:black !important;
   background-color:#2cf6b3;
   margin:auto;
   margin-top:50px;
+}
+
+.questions {
+
+margin:top:100px !important;
+
+
+}
+
+.visibility {
+  display:none;
+}
+
+.question {
+  width:100%;
+  height:auto;
+  text-align: center;
+  background-color:rgba(44, 246, 179, 1);
+    min-height:50px !important;
+}
+
+#qtext {
+  color:white;
+}
+
+
+#buttons {
+  width:100%;
+  min-height:50%
+}
+
+
+#c1, #c2, #c3, #c4{
+  width:90%;
+  min-height:100px;
+  margin-top:15px;
+  margin:bottom:15px;
+  background-color:rgba(44, 246, 179, 0);
+  color:rgba(44, 246, 179, 1);
+  border: 10px solid rgba(44, 246, 179, 1);
+  font-size:3em;
+}
+
+#buttons {
+  text-align:center;
+}
+#c1:hover, #c2:hover, #c3:hover, #c4:hover {
+
+  transition:(0.2s);
+  transform:scale(1.1);
+  background-color:rgba(120, 126, 124, 0.1);
 }

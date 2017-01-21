@@ -46,13 +46,13 @@ function loadFile() {
       console.log(result);
   }
 
-  function bodyAppend(tagName, innerHTML) {
+/*  function bodyAppend(tagName, innerHTML) {
       var elm;
 
       elm = document.createElement(tagName);
       elm.innerHTML = innerHTML;
       document.body.appendChild(elm);
-  }
+  } */
 
   function startOfflineGame(json) {
     json = JSON.parse(json);
@@ -69,6 +69,13 @@ function loadFile() {
   function showQuestion(question, choices) {
     console.log(question);
     console.log(choices);
+    $(".offline-gameplay-card").addClass("visibility");
+    $(".questions").removeClass("visibility");
+  /*  $("#qtext").text(question);
+   for(int i = 1; i < 5; i++) {
+       $("#c" + i).innerText = choices[i-1];
+   } */
+
   }
 
   function waitForResponse() {
