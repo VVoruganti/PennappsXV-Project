@@ -34,51 +34,81 @@
       <a class="mdl-navigation__link" href="#">My Profile</a>
     </nav>
   </div>
-  <main class="mdl-layout__content"></main>
+  <main class="mdl-layout__content">
+    <section class="content">
+            <h1>Whizdom</h1>
+            <h2>A new quiz game for a mobile generation.</h2>
+            <div class="mdl-card mdl-shadow--2dp">
+              <div class="mdl-card_title">
+                  <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--col3"><h4>What is Whizdom?</h4></div>
+                    <div class="mdl-cell mdl-cell--col3"><h4>Why Play Whizdom?</h4></div>
+                    <div class="mdl-cell mdl-cell--col3"><h4>Who are we?</h4></div>
+                  </div>
+              </div>
+              <div class="mdl-card_supporting-text">
+                  <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--col3">orem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                      Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
+                      Donec cursus rhoncus vehicula.<br>
+                      Vivamus congue ex nisi, sed fringilla sapien dictum id.<br>
+                      Phasellus sed lectus ante.</div>
+                    <div class="mdl-cell mdl-cell--col3">orem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                      Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
+                      Donec cursus rhoncus vehicula.<br>
+                      Vivamus congue ex nisi, sed fringilla sapien dictum id.<br>
+                      Phasellus sed lectus ante.</div>
+                    <div class="mdl-cell mdl-cell--col3">orem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                      Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
+                      Donec cursus rhoncus vehicula.<br>
+                      Vivamus congue ex nisi, sed fringilla sapien dictum id.<br>
+                      Phasellus sed lectus ante.</div>
+                  </div>
+              </div>
+            </div>
+    </section>
+    <!-- Accent-colored raised button with ripple -->
+    <button id="test"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        Learn Whizdom
+    </button>
+
+
+<div class="mdl-grid">
+
+
+
+  <div>
+</div>
+    <form enctype="multipart/form-data" action="/csv" method="post" id="myForm">
+        <input type="file" name="file"/>
+        <input type="submit" name="submit"/>
+    </form>
+
+    <form action="/getcsv" method"get" id="getForm">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--col9">
+            <input class="mdl-textfield__input" type="text" id="getID">
+            <label class="mdl-textfield__label" for="sample3">Type in the ID</label>
+          </div>
+          <div class="mdl-cell mdl-cell--col9">
+            <input type="submit" name="submit" class="mdl-button mdl-js button mdl-button-raised mdl-js-ripple-effect">
+          </div>
+        </div>
+
+
+        </div>
+    </form>
+
+
+    </form>
+
+  </main>
 </div>
 
 <!--Navbar Ends -->
-<section class="content">
-        <h1>Whizdom</h1>
-        <h2>A new quiz game for a mobile generation.</h2>
-        <div class="mdl-card mdl-shadow--2dp">
-          <div class="mdl-card_title">
-              <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--col3"><h4>What is Whizdom?</h4></div>
-                <div class="mdl-cell mdl-cell--col3"><h4>Why Play Whizdom?</h4></div>
-                <div class="mdl-cell mdl-cell--col3"><h4>Who are we?</h4></div>
-              </div>
-          </div>
-          <div class="mdl-card_supporting-text">
-              <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--col3">orem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                  Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
-                  Donec cursus rhoncus vehicula.<br>
-                  Vivamus congue ex nisi, sed fringilla sapien dictum id.<br>
-                  Phasellus sed lectus ante.</div>
-                <div class="mdl-cell mdl-cell--col3">orem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                  Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
-                  Donec cursus rhoncus vehicula.<br>
-                  Vivamus congue ex nisi, sed fringilla sapien dictum id.<br>
-                  Phasellus sed lectus ante.</div>
-                <div class="mdl-cell mdl-cell--col3">orem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                  Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
-                  Donec cursus rhoncus vehicula.<br>
-                  Vivamus congue ex nisi, sed fringilla sapien dictum id.<br>
-                  Phasellus sed lectus ante.</div>
-              </div>
-          </div>
-        </div>
-</section>
 
-<!-- Accent-colored raised button with ripple -->
-<button id="test"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-    Learn Whizdom
-</button>
 
-<form enctype="multipart/form-data" action="/csv" method="post" id="myForm">
-    <input type="file" name="file"/>
-    <input type="submit" name="submit"/>
-</form>
+
     </body>
 </html>
