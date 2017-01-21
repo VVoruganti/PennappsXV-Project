@@ -1,11 +1,12 @@
-$(document).ready(function() {
-    $.ajax({
-        type: "GET",
-        url: "test.csv",
-        dataType: "text",
-        success: function(data) {process(data)}
-     });
-});
+/*$('#myForm').ajaxForm({
+        url : '/handleCSV', // or whatever
+        dataType : 'text',
+        success : function (response) {
+            alert("The server says: " + response);
+        }
+    })
+;*/
+
 
 var choicemap = {
     "A" : "1",
@@ -30,7 +31,7 @@ var frqmap = {
 };
 
 function process(data) {
-    var allTextLines = data.split(/\r\n|\n/);
+    var allTextLines = data.split(/\r\n|\n/); //credit so
     var quizObj=[];
     for(line in allTextLines) {
         var question = {};
