@@ -6,9 +6,7 @@
         }
     })
 ;*/
- $('#myForm').ajaxForm(function() { 
-    alert("Thank you for your comment!"); 
- }); 
+
 
 var choicemap = {
     "A" : "1",
@@ -33,7 +31,7 @@ var frqmap = {
 };
 
 function process(data) {
-    var allTextLines = data.split(/\r\n|\n/);
+    var allTextLines = data.split(/\r\n|\n/); //credit so
     var quizObj=[];
     for(line in allTextLines) {
         var question = {};

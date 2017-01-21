@@ -56,7 +56,10 @@ function process(data) {
     }
     console.log(quizObj);
     var outText = JSON.stringify(quizObj);
-    fs.writeFile("C://Users/lucar/Desktop/PennApps2017w/data/tests/1.json", outText, function(err) { //TODO make this write to distinct files every time and return the id.
+    var newnum =parseInt(fs.readFileSync('C://Users/lucar/Desktop/PennApps2017w/data/next.txt.txt', 'utf-8'));
+    console.log("new num " + newnum)
+    fs.writeFile('C://Users/lucar/Desktop/PennApps2017w/data/next.txt.txt', newnum+1, function(err){});
+    fs.writeFile("C://Users/lucar/Desktop/PennApps2017w/data/tests/" + newnum + ".json", outText, function(err) { //TODO make this write to distinct files every time and return the id.
         if(err) {
             return console.log(err);
         }
@@ -64,7 +67,7 @@ function process(data) {
         console.log("The file was saved!");
     }); 
 
-    return quizObj;
+    return newnum;
 }
 
 var busboy = require("connect-busboy");
@@ -81,19 +84,19 @@ app.post("/csv", function(req, res) {
         console.log("Uploading: " + filename);
 
         fstream = fs.createWriteStream('C://Users/lucar/Desktop/PennApps2017w/data/tests/temp.csv');
-        
+                console.log(file.read());
         file.pipe(fstream);
-        console.log(file.read());
         fstream.on('close', function () {    
             console.log("Upload Finished of " + filename);             
             fs.readFile('C://Users/lucar/Desktop/PennApps2017w/data/tests/temp.csv','utf-8',function(err,data) {
-                process(data);
+                var id = process(data);
+                res.status(200);
+                res.json({"response" :"successfully received data, your id for future use is " + id});
+
             });
         });
     });
 
-    res.status(200);
-    res.json({"response" :"successfully received data"});
 })
 
 app.use(express.static('data'))
