@@ -73,36 +73,37 @@
     </button>
 
 
-<div class="mdl-grid">
+<div class="mdl-card mdl-shadow--2dp through mdl-shadow--16dp">
 
-
-
-  <div>
+<div class="mdl-card_title">
+   <form enctype="multipart/form-data" action="/csv" method="post" id="myForm">
+      <input type="file" name="file"/>
+      <input class="mdl-button mdl-js button mdl-button-raised mdl-js-ripple-effect" type="submit" name="submit"/>
+  </form>
 </div>
-    <form enctype="multipart/form-data" action="/csv" method="post" id="myForm">
-        <input type="file" name="file"/>
-        <input type="submit" name="submit"/>
-    </form>
-
-    <form action="/getcsv" method"get" id="getForm">
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--col9">
-            <input class="mdl-textfield__input" type="text" id="getID">
-            <label class="mdl-textfield__label" for="sample3">Type in the ID</label>
-          </div>
-          <div class="mdl-cell mdl-cell--col9">
-            <input type="submit" name="submit" class="mdl-button mdl-js button mdl-button-raised mdl-js-ripple-effect">
-          </div>
+<div class="mdl-card_title">
+  <form action="/getcsv" method"get" id="getForm">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--col10">
+          <input class="mdl-textfield__input" id="downloadTest" type="text" id="getID">
+          <label class="mdl-textfield__label" for="sample3">Type in the ID</label>
         </div>
-
-
+        <div class="mdl-cell mdl-cell--col2">
+          <input type="submit" name="submit" class="mdl-button mdl-js button mdl-button-raised mdl-js-ripple-effect">
         </div>
+      </div>
+      </div>
     </form>
+</div>
+
+</div>
 
 
-    </form>
 
+
+
+</div>
   </main>
 </div>
 
