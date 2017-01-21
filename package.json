@@ -1,0 +1,26 @@
+{
+  "name": "pennappsxv-project",
+  "version": "1.0.0",
+  "description": "ReadMe",
+  "main": "expresstest.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "body-parser": "^1.16.0",
+    "require": "^2.4.20",
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VVoruganti/pennappsxv-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VVoruganti/pennappsxv-project/issues"
+  },
+  "homepage": "https://github.com/VVoruganti/pennappsxv-project#readme"
+}
