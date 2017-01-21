@@ -46,3 +46,10 @@ font-size:4em;
 background-color:black !important;
 
 }
+
+
+.offline-gameplay-card {
+  height:50px !important;
+  background-color:#2cf6b3;
+  margin:auto;
+}
