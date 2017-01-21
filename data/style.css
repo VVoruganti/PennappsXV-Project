@@ -1,0 +1,18 @@
+h1, h2 {
+  color:#2cf6b3;
+  text-align:center;
+}
+
+h1 {
+    font-size:12em;
+}
+
+h2 {
+  margin-top:-50px;
+}
+
+.first-long-row{
+  height:100px;
+  width:100%;
+  background-color:#2cf6b3;
+}
