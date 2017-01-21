@@ -11,8 +11,38 @@ h2 {
   margin-top:-50px;
 }
 
-.first-long-row{
-  height:100px;
-  width:100%;
+.mdl-card {
   background-color:#2cf6b3;
+  margin:auto;
+  color:white;
+  width:80%;
+  text-align:center;
+}
+
+.content {
+  padding-top:50px;
+}
+
+header {
+  background-color:#2cf6b3 !important;
+}
+
+
+#test {
+
+display:block !important;
+width: 40%;
+vertical-align: middle;
+height:200px;
+margin:auto !important;
+color:white;
+background-color:#c9ddff !important;
+margin-top:50px !important;
+font-size:4em;
+}
+
+#test:hover {
+
+background-color:black !important;
+
 }
