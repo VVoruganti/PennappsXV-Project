@@ -11,8 +11,24 @@ h2 {
   margin-top:-50px;
 }
 
-.first-long-row{
+.mdl-data-table{
   height:100px;
-  width:100%;
   background-color:#2cf6b3;
+  margin:auto;
+}
+
+.mdl-card {
+  background-color:#2cf6b3;
+  margin:auto;
+  color:white;
+  width:80%;
+  text-align:center;
+}
+
+.body {
+  padding-top:50px;
+}
+
+.mdl-layout__drawer {
+  padding:top:auto;
 }
