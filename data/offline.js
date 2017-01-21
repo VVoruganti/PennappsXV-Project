@@ -54,30 +54,60 @@ function loadFile() {
       document.body.appendChild(elm);
   } */
 
+  var questions, choices;
+
   function startOfflineGame(json) {
     json = JSON.parse(json);
+    questions = [], choices = [];
       for(line in json) {
           jsonObj = (json[line]);
           question = jsonObj["question"];
-          choices = jsonObj["choices"];
-          showQuestion(question, choices);
-          waitForResponse();
-      }
-      console.log(json);
-  }
+          choice = jsonObj["choices"];
 
-  function showQuestion(question, choices) {
-    console.log(question);
-    console.log(choices);
+          questions.push(question);
+          choices.push(choice);
+    }
+    showQuestion(0);
+}
+
+function showQuestion(question) {
+   console.log(choices.length);
+   if(question >= choices.length) {console.log("Done!");return};
     $(".offline-gameplay-card").addClass("visibility");
     $(".questions").removeClass("visibility");
-  /*  $("#qtext").text(question);
-   for(int i = 1; i < 5; i++) {
-       $("#c" + i).innerText = choices[i-1];
-   } */
+    $("#qNum").text(question + 1);
+    $("#qtext").text(questions[question]);
 
+    for(var i = 1; i < 5; i++) {
+        $("#c" + i).text((choices[question])[i-1]);
+    }
+
+    jQuery(function ($) {
+        var fiveSeconds = 4;
+            display = $('#time');
+        startTimer(fiveSeconds, display);
+    });
+
+    setTimeout(function() {showQuestion(question+1)}, 5000);
   }
 
   function waitForResponse() {
 
-  }
+}
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + ":" + seconds);
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
