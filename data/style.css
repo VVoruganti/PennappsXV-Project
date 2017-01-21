@@ -11,7 +11,7 @@ h2 {
   margin-top:-50px;
 }
 
-.mdl-card {
+.intro-text {
   background-color:#2cf6b3;
   margin:auto;
   color:white;
@@ -49,7 +49,8 @@ background-color:black !important;
 
 
 .offline-gameplay-card {
-  height:50px !important;
+  height:100px !important;
   background-color:#2cf6b3;
   margin:auto;
+  margin-top:50px;
 }
