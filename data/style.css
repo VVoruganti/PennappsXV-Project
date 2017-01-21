@@ -11,12 +11,6 @@ h2 {
   margin-top:-50px;
 }
 
-.mdl-data-table{
-  height:100px;
-  background-color:#2cf6b3;
-  margin:auto;
-}
-
 .mdl-card {
   background-color:#2cf6b3;
   margin:auto;
@@ -25,10 +19,30 @@ h2 {
   text-align:center;
 }
 
-.body {
+.content {
   padding-top:50px;
 }
 
-.mdl-layout__drawer {
-  padding:top:auto;
+header {
+  background-color:#2cf6b3 !important;
+}
+
+
+#test {
+
+display:block !important;
+width: 40%;
+vertical-align: middle;
+height:200px;
+margin:auto !important;
+color:white;
+background-color:#c9ddff !important;
+margin-top:50px !important;
+font-size:4em;
+}
+
+#test:hover {
+
+background-color:black !important;
+
 }

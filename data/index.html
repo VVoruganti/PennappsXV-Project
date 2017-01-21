@@ -1,52 +1,57 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="script.js"/></script>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-        <link rel="stylesheet" href="style.css">
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
+      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Whizdom</title>
+<!--  -->
     </head>
     <body>
 
 <!--Navbar Beginning-->
 <div class="mdl-layout mdl-js-layout">
   <header class="mdl-layout__header mdl-layout__header--scroll">
-    <img class="mdl-layout-icon"></img>
+    <img class="mdl-layout-icon" src="Favicon_III.png"></img>
     <div class="mdl-layout__header-row">
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="#">Hello</a>
-        <a class="mdl-navigation__link" href="#">World.</a>
+      <nav class="mdl-navigation ">
+        <a class="mdl-navigation__link" href="#">Signup</a>
+        <a class="mdl-navigation__link" href="https://www.google.com" target=_blank>Login</a>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout__title">Material Design Lite</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#">Hello</a>
-      <a class="mdl-navigation__link" href="#">World.</a>
-      <a class="mdl-navigation__link" href="#">How</a>
-      <a class="mdl-navigation__link" href="#">Are</a>
-      <a class="mdl-navigation__link" href="#">You?</a>
+      <a class="mdl-navigation__link" href="#">Join Existing Game</a>
+      <a class="mdl-navigation__link" href="#">Create New Game</a>
+      <a class="mdl-navigation__link" href="#">Creat New Question Set </a>
+      <a class="mdl-navigation__link" href="#">Browse Question Set</a>
+      <a class="mdl-navigation__link" href="#">My Profile</a>
     </nav>
   </div>
   <main class="mdl-layout__content"></main>
 </div>
 
 <!--Navbar Ends -->
-<div class="body">
+<section class="content">
         <h1>Whizdom</h1>
-        <h2>A new quiz game for a mobile generation</h2>
+        <h2>A new quiz game for a mobile generation.</h2>
         <div class="mdl-card mdl-shadow--2dp">
           <div class="mdl-card_title">
               <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--col3">What is Whizdom?</div>
-                <div class="mdl-cell mdl-cell--col3">Why Play Whizdom?</div>
-                <div class="mdl-cell mdl-cell--col3">Who are we?</div>
+                <div class="mdl-cell mdl-cell--col3"><h4>What is Whizdom?</h4></div>
+                <div class="mdl-cell mdl-cell--col3"><h4>Why Play Whizdom?</h4></div>
+                <div class="mdl-cell mdl-cell--col3"><h4>Who are we?</h4></div>
               </div>
           </div>
-          <div class="mdl-card_suuporting-text">
+          <div class="mdl-card_supporting-text">
               <div class="mdl-grid">
                 <div class="mdl-cell mdl-cell--col3">orem ipsum dolor sit amet, consectetur adipiscing elit.<br>
                   Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
@@ -66,41 +71,13 @@
               </div>
           </div>
         </div>
+</section>
+
+<!-- Accent-colored raised button with ripple -->
+<button id="test"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    Learn Whizdom
+</button>
 
 
-</div>
-
-
-      <!--  <table  class="mdl-data-table mdl-shadow--2dp">
-          <thead>
-            <tr>
-              <th class="mdl-data-table__cell--non-numeric">
-                What is Whizdom?
-              <th >
-                Why Play Whizdom?
-                <th>
-                Who are we?
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
-                Donec cursus rhoncus vehicula.<br>
-                Vivamus congue ex nisi, sed fringilla sapien dictum id.<br>
-                Phasellus sed lectus ante.</th>
-              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
-                Donec cursus rhoncus vehicula.<br>
-                Vivamus congue ex nisi, sed fringilla sapien dictum id.<br>
-                Phasellus sed lectus ante. </th>
-              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-                Donec ac orci tristique, vestibulum neque vel, hendrerit nulla.<br>
-                Donec cursus rhoncus vehicula.<br>
-                Vivamus congue ex nisi, sed fringilla sapien dictum id.<br>
-                Phasellus sed lectus ante.</th>
-              </tr>
-          </tbody>
-        </table> -->
     </body>
 </html>
