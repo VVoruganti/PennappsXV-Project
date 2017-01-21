@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express()
 var bodyParser = require("body-parser")
+var path = require("path");
 
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -58,10 +59,10 @@ function process(data) {
     }
     console.log(quizObj);
     var outText = JSON.stringify(quizObj);
-    var newnum =parseInt(fs.readFileSync('C://Users/' + user + '/Desktop/PennApps2017w/data/next.txt.txt', 'utf-8'));
+    var newnum =parseInt(fs.readFileSync(path.join(__dirname, 'data/next.txt.txt'), 'utf-8'));
     console.log("new num " + newnum)
-    fs.writeFile('C://Users/' + user + '/Desktop/PennApps2017w/data/next.txt.txt', newnum+1, function(err){});
-    fs.writeFile("C://Users/' + user + '/Desktop/PennApps2017w/data/tests/" + newnum + ".json", outText, function(err) { //TODO make this write to distinct files every time and return the id.
+    fs.writeFile(path.join(__dirname, 'data/next.txt.txt'), newnum+1, function(err){});
+    fs.writeFile(path.join(__dirname, 'data/tests/' + newnum + '.json'), outText, function(err) { //TODO make this write to distinct files every time and return the id.
         if(err) {
             return console.log(err);
         }
@@ -85,12 +86,13 @@ app.post("/csv", function(req, res) {
     req.busboy.on('file', function (fieldname, file, filename) {
         console.log("Uploading: " + filename);
 
-        fstream = fs.createWriteStream('C://Users/' + user + '/Desktop/PennApps2017w/data/tests/temp.csv');
+        fstream = fs.createWriteStream(path.join(__dirname, 'data/tests/temp.csv'));
+        
                 console.log(file.read());
         file.pipe(fstream);
         fstream.on('close', function () {    
             console.log("Upload Finished of " + filename);             
-            fs.readFile('C://Users/' + user + '/Desktop/PennApps2017w/data/tests/temp.csv','utf-8',function(err,data) {
+            fs.readFile(path.join(__dirname, 'data/tests/temp.csv'),'utf-8',function(err,data) {
                 var id = process(data);
                 res.status(200);
                 res.json({"response" :"successfully received data, your id for future use is " + id});
@@ -100,6 +102,18 @@ app.post("/csv", function(req, res) {
     });
 
 })
+
+app.get("/getcsv", function(req, res) {
+    console.log(req.query);
+    if (!fs.existsSync(path.join(__dirname, 'data/tests/' + req.query.id + '.json'))) {
+        res.status(404);
+        res.json({"Error 404" : "No test with that id is on this server."});
+    }
+
+    res.status(200);
+    if(!req.query.testname) req.query.testname = "test";
+    res.download(path.join(__dirname, 'data/tests/' + req.query.id + '.json'), req.query.testname + ".json", function(err){console.log(err)});
+}) 
 
 app.use(express.static('data'))
 
