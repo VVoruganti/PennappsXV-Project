@@ -197,20 +197,23 @@ margin:top:100px !important;
 
 
 .code {
+  display:block !important;
+  width:inherit !important;
   margin:auto;
-  vertical-align: middle;
-  width:50% !important;
+  margin-left:30%;
   height:500px;
   margin-top:10%;
-  background-color:#c9ddff !important;
+  background-color:rgb(222,108,131) !important;
 }
 
 .code .mdl-card_title{
+  width:100%;
   text-align:center;
-  display:inline-block;
+  margin:auto;
 }
 
 .code p{
+  margin-top:30px;
   display:inline-block;
   text-align: center !important;
 }
