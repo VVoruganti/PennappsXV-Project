@@ -18,7 +18,7 @@
 
   <div class="mdl-layout mdl-js-layout">
     <header class="mdl-layout__header mdl-layout__header--scroll">
-      <img class="mdl-layout-icon" src="Favicon_III.png"></img>
+      <img class="mdl-layout-icon"></img>
       <div class="mdl-layout__header-row">
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation ">
@@ -46,7 +46,7 @@
 </div>
 
 <div class="questions visibility">
-  <h2>Question Number <span id="qNum"></span></h2>
+  <h2>Question Number <span id="qNum"></span>              Score:<span id="score"></span></h2>
   <div class="mdl-card question">
     <div class="mdl-card_title">
       <h2 class="mdl-card_title-text" id="qtext"></h2>
@@ -54,14 +54,19 @@
     </div>
 
     <div id="buttons">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="c1">Choice 1</button><br>
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="c2">Choice 2</button><br>
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="c3">Choice 3</button><br>
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="c4">Choice 4</button><br>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect ch" onclick="clickAnswer(1,this);" id="c1">Choice 1</button><br>
+        <p for="c1" id="tt1" class="mdl-tooltip mdl-tooltip--large visibility tt">davs</p>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect ch" onclick="clickAnswer(2,this);" id="c2">Choice 2</button><br>
+        <p for="c2" id="tt2" class="mdl-tooltip mdl-tooltip--large visibility tt">fads</p>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect ch" onclick="clickAnswer(3,this);" id="c3">Choice 3</button><br>
+        <p for="c3" id="tt3" class="mdl-tooltip mdl-tooltip--large visibility tt">adsf</p>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect ch" onclick="clickAnswer(4,this);" id="c4">Choice 4</button><br>
+        <p for="c4" id="tt4" class="mdl-tooltip mdl-tooltip--large visibility tt">asdf</p>
 
       </div>
 
     <div>Registration closes in <span id="time">00:05</span> seconds!</div>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="next" >Next</button>
 
 
     </div>

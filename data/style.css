@@ -66,6 +66,10 @@ margin:top:100px !important;
   display:none;
 }
 
+.ttvisibility {
+  display:none;
+}
+
 .question {
   width:100%;
   height:auto;
@@ -104,4 +108,21 @@ margin:top:100px !important;
   transition:(0.2s);
   transform:scale(1.1);
   background-color:rgba(120, 126, 124, 0.1);
+}
+
+.correct {
+  background-color:rgba(44, 246, 179, 1) !important;
+  color:white !important;
+}
+
+.selectedAnswer{
+  background-color:rgba(198, 199, 199, 1) !important;
+  border:10px solid rgba(198, 199, 199, 1) !important;
+  color:white !important;
+}
+
+.incorrect {
+  background-color:#de6c83 !important;
+  border:10px solid #de6c83 !important;
+  color:white;
 }
