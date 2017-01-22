@@ -28,13 +28,7 @@ function loadFile() {
 
           fr = new FileReader();
         }
-        /*  fr.onload = receivedBinary;
-          fr.readAsBinaryString(file);
-      }
-
-      function receivedBinary() {
-          showResult(fr, "Binary");
-      } */
+        
   }
 
   function showResult(fr, label) {
@@ -132,7 +126,6 @@ function showQuestion(question) {
     $(".selectedAnswer").removeClass("selectedAnswer");
     $(".incorrect").removeClass("incorrect");
     $(".tt").addClass("visibility");
-
 
     for(var i = 1; i < 5; i++) {
         $("#c" + i).text((choices[question])[i-1]);

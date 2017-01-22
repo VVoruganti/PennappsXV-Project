@@ -1,11 +1,45 @@
-$(document).ready(function() {
 
+    // if user is running mozilla then use it's built-in WebSocket
+    window.WebSocket = window.WebSocket || window.MozWebSocket;
+     console.log("wow");
 
-});
+    var id = 10;
+    var name = "bob";
+    var connection = new WebSocket('ws://127.0.0.1:1337');
 
-var question ;
+    console.log(connection);
+    connection.onopen = function () {
+        connection.send(id);
+        console.log("opened");
+    };
+
+    connection.onerror = function (error) {
+        // an error occurred when sending/receiving data
+    };
+
+    connection.onmessage = function (message) {
+        console.log(message.data);
+        try{
+            jsonObj = JSON.parse(message.data); //we now have the question (theoretically)
+            if(jsonObj["name"]) {connection.send(name); return;}
+            if(jsonObj["POINTS"]) {alert("You now have " + jsonObj["POINTS"]) + " points!"; return;}
+            else {setAttributes(jsonObj["question"], jsonObj["choices"]);}
+
+        } catch(e) {console.log(e.toString());}
+    };
+
+    connection.onclose = function () {
+        console.log("the connection was closed :(");
+    }
+
+    function submitMessage(choice) {
+        connection.send(choice);
+    }
+     var question ;
 var answers = [];
 var userInput ;
+
+console.log("wow");
 
 function getData(data){
 
@@ -17,28 +51,29 @@ console.log(answers);
 }
 
 function setAttributes(question,choices) {
-
+    console.log("here");
   $(qtext).text(question);
 
-  for(var i = 0; i < choices.length; i++) {
+  for(var i = 0; i <= choices.length; i++) {
 
-    $("#c" + i).text(choices[i]);
+    $("#c" + i).text(choices[i-1]);
 
   }
 
   jQuery(function ($) {
-      var fiveSeconds = 4;
+      var fiveSeconds = 9;
           display = $('#time');
       startTimer(fiveSeconds, display);
   });
 
+  setTimeout(function() {submitMessage(userInput)}, 10000);
 }
 
 function clickAnswer(int,element) {
 
-userInput = int;
+    userInput = int;
 
-$(this).addClass("selectedAnswer");
+    $(this).addClass("selectedAnswer");
 
 }
 
@@ -55,7 +90,6 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = 0;
-
         }
     }, 1000);
 }
