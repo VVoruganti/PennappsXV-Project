@@ -1,4 +1,4 @@
-$(function () {
+/* $(function () {
     // if user is running mozilla then use it's built-in WebSocket
     window.WebSocket = window.WebSocket || window.MozWebSocket;
 
@@ -6,9 +6,10 @@ $(function () {
     var name = "bob";
     var connection = new WebSocket('ws://127.0.0.1:1337');
 
-    
+    console.log(connection);
     connection.onopen = function () {
         connection.send(id); 
+        console.log("opened");
     };
 
     connection.onerror = function (error) {
@@ -16,24 +17,24 @@ $(function () {
     };
 
     connection.onmessage = function (message) {
-        if(message.data = "name") {connection.send(name);}
+        console.log("wow " + message.data);
         try{ 
             jsonObj = JSON.parse(message.data); //we now have the question (theoretically)
-            showQuestionFromJSON(jsonObj);
-        } catch(e) {}
+            if(jsonObj["name"]) {connection.send(name); return;}
+            else {setAttributes(jsonObj);}
+            
+        } catch(e) {console.log(e.toString());}
     };
     
     connection.onclose = function () {
         console.log("the connection was closed :(");
     }
     
-    
-    function showQuestionFromJSON(json) {
-        question = json["question"];
-        choices = json["choices"];
-        answer = json["answer"];
-        
-        //do stuff to the layout here.
+    function submitMessage(choice) {
+        connection.send(choice);
     }
-});
+}); */
+
+
+
 

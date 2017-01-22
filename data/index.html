@@ -3,7 +3,10 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="http://malsup.github.com/jquery.form.js"></script>
-        <script src="script.js"/></script>
+        
+        <script src="script.js"></script>
+        <script src="script2.js"></script>
+        
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -15,7 +18,7 @@
 <!--Navbar Beginning-->
 <div class="mdl-layout mdl-js-layout">
   <header class="mdl-layout__header mdl-layout__header--scroll">
-    <img class="mdl-layout-icon" src="Favicon_III.png"></img>
+    <img class="mdl-layout-icon"></img>
     <div class="mdl-layout__header-row">
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation ">
@@ -28,17 +31,17 @@
     <span class="mdl-layout__title">Material Design Lite</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" href="#">Join Existing Game</a>
-      <a class="mdl-navigation__link" href="#">Create New Game</a>
+      <a class="mdl-navigation__link" href="admin-home.html">Create New Game</a>
       <a class="mdl-navigation__link" href="#">Create New Question Set </a>
-      <a class="mdl-navigation__link" href="">Play Offline</a>
+      <a class="mdl-navigation__link" href="offline-gameplay.html">Play Offline</a>
       <a class="mdl-navigation__link" href="#">My Profile</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
     <section class="content">
             <h1>Whizdom</h1>
-            <h2>A new quiz game for a mobile generation.</h2>
-            <div class="mdl-card mdl-shadow--2dp">
+            <h2 class="subheader">A new quiz game for a mobile generation.</h2>
+            <div class=" intro-text mdl-card mdl-shadow--2dp">
               <div class="mdl-card_title">
                   <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--col3"><h4>What is Whizdom?</h4></div>
@@ -73,7 +76,7 @@
     </button>
 
 
-<div class="mdl-card mdl-shadow--2dp through mdl-shadow--16dp">
+<div class="mdl-card mdl-shadow--2dp through mdl-shadow--16dp"></div>
 
 <div class="mdl-card_title">
    <form enctype="multipart/form-data" action="/csv" method="post" id="myForm">
@@ -102,7 +105,7 @@
 
 
 
-
+<button onclick="sendNext();"></button>
 </div>
   </main>
 </div>
