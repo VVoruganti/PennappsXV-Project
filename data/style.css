@@ -126,3 +126,36 @@ margin:top:100px !important;
   border:10px solid #de6c83 !important;
   color:white;
 }
+
+.new-test {
+  margin:auto;
+  vertical-align: middle;
+  width:50% !important;
+  height:500px;
+  margin-top:10%;
+  background-color:#c9ddff !important;
+}
+
+.new-test .mdl-card_title:first-child{
+  text-align:center;
+  display:inline-block;
+}
+
+.new-test .mdl-card_title:nth-child(2) {
+  text-align:center;
+  display:inline-block;
+}
+
+.new-test .mdl-card_title {
+  padding-top:50px;
+}
+
+.mdl-layout__drawer {
+  text-align:left;
+}
+
+  .mdl-navigation__link:hover {
+
+    background-color:rgba(222, 108, 131, 0.54) !important;
+
+  }
