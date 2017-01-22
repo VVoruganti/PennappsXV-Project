@@ -161,7 +161,29 @@ margin:top:100px !important;
   }
 
   .main-link {
+    padding: 20px 24px 20px 24px !important;
+  }
 
-    line-height: 64px !important;
+ .main-link span:hover {
+    background-color:rgb(222,108,131) !important;
+  }
 
+  .transition-inputs {
+    margin-top:15px !important;
+    text=align:center !important;
+    padding:auto;
+    margin:auto !important;
+  }
+
+  .transition-inputs button {
+    display:block !important;
+    margin:auto !important;
+    background-color: rgba(44, 246, 179, 1);
+    text-align:center;
+
+  }
+
+  .transition-inputs p {
+    text-align:center !important;
+    margin-top:20px;
   }
