@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.form.js"></script>
+<script src="online.js"/></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<title>Offline Play</title>
+</head>
+<body>
+
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <img class="mdl-layout-icon"></img>
+      <div class="mdl-layout__header-row">
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation ">
+          <a class="mdl-navigation__link" href="#">Signup</a>
+          <a class="mdl-navigation__link" href="https://www.google.com" target=_blank>Login</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout__title">Material Design Lite</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#">Join Existing Game</a>
+        <a class="mdl-navigation__link" href="#">Create New Game</a>
+        <a class="mdl-navigation__link" href="#">Create New Question Set </a>
+        <a class="mdl-navigation__link" href="">Play Offline</a>
+        <a class="mdl-navigation__link" href="#">My Profile</a>
+      </nav>
+    </div>
+    <main class="mdl-layout__content">
+
+<div class="questions">
+  <h2>Question Number <span id="qNum"></span>              Score:<span id="score"></span></h2>
+  <div class="mdl-card question">
+    <div class="mdl-card_title">
+      <h2 class="mdl-card_title-text" id="qtext"></h2>
+      </div>
+    </div>
+
+    <div id="buttons">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect ch" onclick="clickAnswer(1,this);" id="c1">Choice 1</button><br>
+        <p for="c1" id="tt1" class="mdl-tooltip mdl-tooltip--large visibility tt">davs</p>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect ch" onclick="clickAnswer(2,this);" id="c2">Choice 2</button><br>
+        <p for="c2" id="tt2" class="mdl-tooltip mdl-tooltip--large visibility tt">fads</p>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect ch" onclick="clickAnswer(3,this);" id="c3">Choice 3</button><br>
+        <p for="c3" id="tt3" class="mdl-tooltip mdl-tooltip--large visibility tt">adsf</p>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect ch" onclick="clickAnswer(4,this);" id="c4">Choice 4</button><br>
+        <p for="c4" id="tt4" class="mdl-tooltip mdl-tooltip--large visibility tt">asdf</p>
+
+      </div>
+
+    <div>Times up in  <span id="time">00:05</span> seconds!</div>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="next" >Next</button>
+
+
+    </div>
+  </main>
+  </div>
+
+
+
+</body>
+</html>

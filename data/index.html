@@ -18,8 +18,9 @@
 <!--Navbar Beginning-->
 <div class="mdl-layout mdl-js-layout">
   <header class="mdl-layout__header mdl-layout__header--scroll">
-    <img class="mdl-layout-icon"></img>
+
     <div class="mdl-layout__header-row">
+      <a class="mdl-navigation__link main-link" href ="index.html"><span class="mdl-layout-title">Whizdom</span></a>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation ">
         <a class="mdl-navigation__link" href="#">Signup</a>
@@ -28,13 +29,12 @@
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout__title">Material Design Lite</span>
+    <span class="mdl-layout__title">Whizdom</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#">Join Existing Game</a>
-      <a class="mdl-navigation__link" href="admin-home.html">Create New Game</a>
-      <a class="mdl-navigation__link" href="#">Create New Question Set </a>
+      <a class="mdl-navigation__link" href="admin-home.html">Host a Game</a>
+      <a class="mdl-navigation__link" href="new-test.html">Create New Test</a>
+      <a class="mdl-navigation__link" href="user-home.html">Join an Existing game  </a>
       <a class="mdl-navigation__link" href="offline-gameplay.html">Play Offline</a>
-      <a class="mdl-navigation__link" href="#">My Profile</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -74,38 +74,7 @@
     <button id="test"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
         Learn Whizdom
     </button>
-
-
-<div class="mdl-card mdl-shadow--2dp through mdl-shadow--16dp"></div>
-
-<div class="mdl-card_title">
-   <form enctype="multipart/form-data" action="/csv" method="post" id="myForm">
-      <input type="file" name="file"/>
-      <input class="mdl-button mdl-js button mdl-button-raised mdl-js-ripple-effect" type="submit" name="submit"/>
-  </form>
-</div>
-<div class="mdl-card_title">
-  <form action="/getcsv" method"get" id="getForm">
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--col10">
-          <input class="mdl-textfield__input" id="downloadTest" type="text" id="getID">
-          <label class="mdl-textfield__label" for="sample3">Type in the ID</label>
-        </div>
-        <div class="mdl-cell mdl-cell--col12">
-          <input type="submit" name="submit" class="mdl-button mdl-js button mdl-button-raised mdl-js-ripple-effect">
-        </div>
-      </div>
-      </div>
-    </form>
-</div>
-
-            <input type="textarea" name="testname">
-
-
-
-
-<button onclick="sendNext();"></button>
+      <button onclick="sendNext();">some text</button>
 </div>
   </main>
 </div>
