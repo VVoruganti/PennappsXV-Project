@@ -60,15 +60,17 @@ function loadFile() {
           jsonObj = (json[line]);
           question = jsonObj["question"];
           choices = jsonObj["choices"];
-          showQuestion(question, choices);
+          showQuestion(question, choices, line);
           waitForResponse();
       }
       console.log(json);
   }
 
-  function showQuestion(question, choices) {
+  function showQuestion(question, choices, qNum) {
     console.log(question);
     console.log(choices);
+    
+      $("#qNum").text("Question: " + qNum);
   }
 
   function waitForResponse() {
