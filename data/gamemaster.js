@@ -12,6 +12,7 @@ var path = require("path");
 var fs = require('fs');
 
 fs.readFile(path.join(__dirname, 'tests/3.json'),'utf-8',function(err,data) {
+    console.log(err);
     beginGame(data);
 });
 
@@ -20,6 +21,7 @@ var jsons;
 
 function beginGame(json) {
     json = JSON.parse(json);
+    console.log(json);
     jsons = [];
     for(line in json) {
         jsons.push(json[line]);
@@ -27,6 +29,7 @@ function beginGame(json) {
     for(js in jsons) {
         splits.push(splitJSONIntoPrevPost(jsons[js]));
     }
+    console.log(jsons);
 }
 
 function initWebSocketAdmin(id) {
