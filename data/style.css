@@ -187,3 +187,42 @@ margin:top:100px !important;
     text-align:center !important;
     margin-top:20px;
   }
+
+
+.file-upload {
+  display:inline-block !important;
+  margin-left: 35px !important;
+  margin-top:15px !important;
+}
+
+
+.code {
+  margin:auto;
+  vertical-align: middle;
+  width:50% !important;
+  height:500px;
+  margin-top:10%;
+  background-color:#c9ddff !important;
+}
+
+.code .mdl-card_title{
+  text-align:center;
+  display:inline-block;
+}
+
+.code p{
+  display:inline-block;
+  text-align: center !important;
+}
+
+.dastuff {
+  width:200px;
+  display:block !important;
+  margin:auto !important;
+  margin-top:20%;
+
+}
+
+.mdl-cell--col3 {
+  text-align:left;
+}
