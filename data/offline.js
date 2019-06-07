@@ -28,12 +28,11 @@ function loadFile() {
 
           fr = new FileReader();
         }
-        
+
   }
 
   function showResult(fr, label) {
       var markup, result, n, aByte, byteStr;
-
       markup = [];
       result = fr.result;
       startOfflineGame(fr.result);

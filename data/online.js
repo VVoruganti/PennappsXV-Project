@@ -5,7 +5,7 @@
 
     var id = 10;
     var name = "bob";
-    var connection = new WebSocket('ws://127.0.0.1:1337');
+    var connection = new WebSocket('ws://10.42.80.149:1337');
 
     console.log(connection);
     connection.onopen = function () {
